@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  border: 1px solid #6366F1;
+  border-radius: 5px;
+  column-gap: 5px;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+
+  .rowWrapper {
+    margin: 5px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
