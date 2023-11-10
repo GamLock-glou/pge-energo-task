@@ -19,13 +19,9 @@ export const CardsInfo: FC<CardsInfoProps> = ({ cards }) => {
     if (event.code === "Space" && activeId) {
       dispatch(changeStatusMessage(activeId));
     }
-  }, [activeId]);
+  }, [activeId, dispatch]);
   useEffect(() => {
-    if (activeId) {
-      window.addEventListener("keyup", handleKeyUp)
-  } else {
-      window.removeEventListener("keyup", handleKeyUp)
-  }
+  window.addEventListener("keyup", handleKeyUp)
 
   return () => window.removeEventListener("keyup", handleKeyUp)
   }, [activeId, handleKeyUp]);
